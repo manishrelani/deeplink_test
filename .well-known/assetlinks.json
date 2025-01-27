@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.communitify.kootami",
+            "sha256_cert_fingerprints": [
+                "9A:F7:53:00:84:28:06:6E:55:7B:88:3E:7F:D9:BC:9F:2D:C7:D1:FE:26:C9:E8:B3:1C:C5:0D:34:DE:54:1B:92"
+            ]
+        }
+    }
+]
