@@ -17,6 +17,9 @@ const (
 )
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+
+	fmt.Println("request", request)
+
 	userAgent := request.Headers["User-Agent"]
 	eventID := strings.TrimPrefix(request.Path, "/dp/event/")
 	if eventID == "" {
