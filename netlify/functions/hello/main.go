@@ -10,9 +10,9 @@ import (
 	// Base URLs for store links
 )
 
-// Base URLs for store links
+// Base URLs for store links//com.communitify.kootami
 const (
-	androidStoreBaseURL = "https://play.google.com/store/apps/details?id=com.example.app&referrer="
+	androidStoreBaseURL = "https://play.google.com/store/apps/details?id=com.communitify.kootami&referrer="
 	iosStoreBaseURL     = "https://apps.apple.com/app/id123456789?ref="
 )
 
@@ -35,7 +35,7 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusFound,
 			Headers: map[string]string{
-				"Location": fmt.Sprintf("%s%s", androidStoreBaseURL, eventID),
+				"Location": fmt.Sprintf("%s%s", androidStoreBaseURL, "event%3d"+eventID),
 			},
 		}, nil
 	} else if strings.Contains(strings.ToLower(userAgent), "iphone") || strings.Contains(strings.ToLower(userAgent), "ipad") {
