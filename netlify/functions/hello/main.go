@@ -21,7 +21,9 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 	fmt.Println("request", request)
 
 	userAgent := request.Headers["User-Agent"]
-	eventID := strings.TrimPrefix(request.Path, "/dp/event/")
+	fmt.Println("agent", userAgent)
+	eventID := strings.TrimPrefix(request.Path, "/event")
+	fmt.Println("eventID", eventID)
 	if eventID == "" {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: http.StatusBadRequest,
