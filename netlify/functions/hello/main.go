@@ -20,9 +20,9 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 
 	fmt.Println("request", request)
 
-	userAgent := request.Headers["User-Agent"]
+	userAgent := request.Headers["user-agent"]
 	fmt.Println("agent", userAgent)
-	eventID := strings.TrimPrefix(request.Path, "/event")
+	eventID := strings.TrimPrefix(request.Path, "/.netlify/functions/hello/event/")
 	fmt.Println("eventID", eventID)
 	if eventID == "" {
 		return &events.APIGatewayProxyResponse{
