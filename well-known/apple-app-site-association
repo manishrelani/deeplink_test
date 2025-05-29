@@ -6,13 +6,9 @@
                     "99J63DN6W6.com.communitify.kootami"
                 ],
                 "components": [
+                    
                     {
-                        "#": "no_universal_links",
-                        "exclude": true,
-                        "comment": "Matches any URL with a fragment that equals no_universal_links and instructs the system not to open it as a universal link."
-                    },
-                    {
-                        "/": "/*",
+                        "/": "/dp/*",
                         "comment": "Matches any URL with a path that starts with /dp/."
                     }
                 ]
